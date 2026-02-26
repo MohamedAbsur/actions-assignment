@@ -26,7 +26,8 @@ jobs:
       - name: Commit changes
         run: |
           git add daily-log.txt
-          git commit -m "Automated daily update [skip ci]" || true
+          git commit -m "Daily update: $(date -u) [skip ci]" || true
+
 
       - name: Push changes
         env:
